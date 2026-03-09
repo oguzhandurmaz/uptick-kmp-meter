@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UpTick</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="label_setup_meter">SETUP YOUR METER IN MINUTES</string>
+    <string name="label_enter_name">Enter Name...</string>
+    <string name="label_select_speed">SELECT SPEED</string>
+    <string name="label_speed_slow">SLOW</string>
+    <string name="label_speed_medium">MEDIUM</string>
+    <string name="label_speed_fast">FAST</string>
+</resources>
