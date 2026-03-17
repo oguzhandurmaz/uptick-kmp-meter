@@ -6,7 +6,8 @@ import android.view.WindowManager
 lateinit var currentActivity: Activity
 
 actual fun keepScreenOn(
-    enabled: Boolean) {
+    enabled: Boolean
+) {
 
     val window = currentActivity.window
 

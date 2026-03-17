@@ -43,6 +43,8 @@ kotlin {
 
             implementation(libs.compose.navigation)
 
+            implementation(libs.kotlinx.serialization.json)
+
             implementation(projects.shared)
             implementation(projects.feature.home)
             implementation(projects.feature.meter)

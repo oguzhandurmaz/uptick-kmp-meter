@@ -7,7 +7,9 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.uptick.home.HomeScreen
 import com.uptick.meter.MeterScreen
+import com.uptick.shared.domain.MeterSpeed
 import com.uptick.shared.navigation.Screen
+import kotlin.reflect.typeOf
 
 @Composable
 fun SetupNavGraph(startDestination: Screen = Screen.Home){
@@ -24,11 +26,18 @@ fun SetupNavGraph(startDestination: Screen = Screen.Home){
             )
         }
 
-        composable<Screen.Meter> { backStackEntry ->
+        composable<Screen.Meter>(
+            typeMap = mapOf(
+                typeOf<MeterSpeed>() to MeterSpeedType
+            )
+        ) { backStackEntry ->
             val route = backStackEntry.toRoute<Screen.Meter>()
             MeterScreen(
                 name = route.name,
-                speed = route.speed
+                speed = route.speed,
+                onNavigateBack = {
+                    navController.navigateUp()
+                }
             )
         }
     }
